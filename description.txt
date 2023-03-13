@@ -1,0 +1,5 @@
+Implementieren Sie ein Programm zur Verwaltung von Aktienkursen.
+Um schnell nach einer bestimmten Aktie suchen zu können, sollen die Aktien in einer Hashtabelle verwaltet werden. 
+Pro Aktie sollen Name, Wertpapierkennnummer (WKN als String) und Kürzel (auch ein beliebiger String) gespeichert werden. 
+Weiters sind pro Aktie die Kursdaten der vergangenen 30 Tage zu verwalten mit folgenden Informationen:
+  (Date,Open,High,Low,Close,Volume,Adj Close)
