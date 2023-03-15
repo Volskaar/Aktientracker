@@ -32,6 +32,8 @@ while True:
     #plots ascii graph of last 30 days of graph
     elif userinput == "PLOT":
         print("plot stock")
+        stockname = input("Atkienname: ")
+        hashtable.plot(stockname)
 
     #stores current hashtable in csv file
     elif userinput == "SAVE":

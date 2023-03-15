@@ -84,3 +84,29 @@ class hashTable:
             if elem is not None:
                 print(elem)
 
+    #prints price chart
+    def plot(self, name):
+        ausgabe = str()
+        n = 29
+
+        index = self.get_hash_code(name)
+  
+        for i in range(0, n):
+            if self.table[index] is not None:
+                for stock in self.table[index]:
+                    if stock.name == name:
+                         if i < 29:
+                            day1 = stock.history[-30 + i][4]
+                            day2 = stock.history[-29 + i][4]
+                            day1 = float(day1)
+                            day2 = float(day2)
+                
+                            if day1 - day2 <= 2 and day1 - day2 >= -2:
+                                ausgabe = ausgabe + '- '
+                            elif day1 - day2 > 2:
+                                ausgabe = ausgabe + '\\ '
+                            else:
+                                ausgabe = ausgabe + '/ '
+
+        print(ausgabe),
+
