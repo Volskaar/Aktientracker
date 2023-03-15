@@ -1,4 +1,6 @@
 import dataHandler as dh
+import csv
+import pickle
 
 class hashTable:
     def __init__(self):
@@ -63,4 +65,22 @@ class hashTable:
                 if stock.name == name:
                     del self.table[index]
 
+
+    #pickles hashtable and stores into csv file
+    def saveToCSV(self, filename):
+        csv = open(filename, 'wb')
+        pickle.dump(self.table, csv)
+        csv.close()
+
+
+    #depickles and loads hashtable from csv file then stores in hashtable
+    def loadFromCSV(self, filename):
+        with open(filename, 'rb') as pickleFile:
+            hashtable = pickle.load(pickleFile)
+        
+        self.table = hashtable
+        
+        for elem in hashtable:
+            if elem is not None:
+                print(elem)
 

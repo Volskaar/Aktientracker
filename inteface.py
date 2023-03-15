@@ -29,18 +29,19 @@ while True:
         stockname = input("Atkienname: ")
         hashtable.search(stockname)
 
+    #plots ascii graph of last 30 days of graph
     elif userinput == "PLOT":
         print("plot stock")
 
+    #stores current hashtable in csv file
     elif userinput == "SAVE":
-        print("save hashtable")
-        getFilename = input("filename: ")
+        filename = input("Filename: ")
+        hashtable.saveToCSV(filename)
 
+    #loads hashtable from csv file
     elif userinput == "LOAD":
-        print("load hashtable")
-        getFilename = input("filename: ")
+        filename = input("filename: ")
+        hashtable.loadFromCSV(filename)
 
     elif userinput == "QUIT":
         break
-
-    #print out hashtable contents
