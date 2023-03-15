@@ -3,3 +3,11 @@ Um schnell nach einer bestimmten Aktie suchen zu können, sollen die Aktien in e
 Pro Aktie sollen Name, Wertpapierkennnummer (WKN als String) und Kürzel (auch ein beliebiger String) gespeichert werden. 
 Weiters sind pro Aktie die Kursdaten der vergangenen 30 Tage zu verwalten mit folgenden Informationen:
   (Date,Open,High,Low,Close,Volume,Adj Close)
+
+
+Struktur:
+0. Data-Folder		-> speichert CSV files mit Daten
+1. dataHandler.py	-> verwaltet Zugriff auf CSV-files und (de-)serialization
+2. hashing.py		-> verwaltet Hashtabelle(n) mit Daten
+3. functions.py 	-> definiert, wie Funktionen ausgearbeitet sind
+4. interface.py		-> verarbeitet UserInput mit Funktionen
