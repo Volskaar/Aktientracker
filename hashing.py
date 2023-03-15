@@ -29,7 +29,7 @@ class hashTable:
         if self.table[index] is None:
             self.table[index] = list([stock])
         else:
-            self.map[index].append([stock])
+            self.table[index].append([stock])
 
     
     #calculates index based on name
