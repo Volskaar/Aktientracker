@@ -90,23 +90,26 @@ class hashTable:
         n = 29
 
         index = self.get_hash_code(name)
-  
+
+        #for loop to go through the rows of history from the stock object
         for i in range(0, n):
             if self.table[index] is not None:
                 for stock in self.table[index]:
                     if stock.name == name:
                          if i < 29:
+                            #initilaze the variables with the close value in column 5 (0,1,2,3,4)
                             day1 = stock.history[-30 + i][4]
                             day2 = stock.history[-29 + i][4]
                             day1 = float(day1)
                             day2 = float(day2)
                 
+                            #Compares if the are +-2 units apart if so than append '-' else (>2 -> '/' )/(<-2 -> '\')
                             if day1 - day2 <= 2 and day1 - day2 >= -2:
                                 ausgabe = ausgabe + '- '
                             elif day1 - day2 > 2:
                                 ausgabe = ausgabe + '\\ '
                             else:
                                 ausgabe = ausgabe + '/ '
-
+        #prints output
         print(ausgabe),
 
