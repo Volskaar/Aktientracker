@@ -17,7 +17,6 @@ while True:
     elif userinput == "DEL":
         stockname = input("Atkienname: ")
         hashtable.remove(stockname)
-        print("delete stock")
 
     #kurswerte der letzten 30 tage werden aus csv zu objekt hinzugefügt
     elif userinput == "IMPORT":
@@ -31,7 +30,6 @@ while True:
 
     #plots ascii graph of last 30 days of graph
     elif userinput == "PLOT":
-        print("plot stock")
         stockname = input("Atkienname: ")
         hashtable.plot(stockname)
 

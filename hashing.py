@@ -4,7 +4,7 @@ import pickle
 
 class hashTable:
     def __init__(self):
-        self.size = 500
+        self.size = 1200
         self.table = [None] * self.size
 
     #calculates and returns hashed index of key
